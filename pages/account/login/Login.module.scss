@@ -2,9 +2,10 @@
   display: flex;
   align-items: center;
   background-color: #faf5ff;
+  height: 100vh;
 
   & .form {
-    margin: 0 auto;
+    margin: 112px;
   }
 
   & .title {
@@ -30,5 +31,67 @@
     background-image: linear-gradient(0deg, #130525 0%, rgba(105, 57, 153, 0) 100%), url("/images/bg.png");
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: top;
+  }
+}
+
+@media only screen and (max-width: 968px) {
+  .background {
+    width: 40% !important;
+  }
+
+  .form {
+    margin: 80px !important;
+  }
+}
+
+@media only screen and (max-width: 415px) {
+  .background {
+    width: 100% !important;
+    position: fixed;
+    background-size: contain !important;
+    background-image: linear-gradient(0deg, #130525 50%, rgba(105, 57, 153, 0) 100%), url("/images/bg.png") !important;
+  }
+
+  .form {
+    z-index: 2;
+    margin: 0 auto !important;
+    background: white;
+    padding: 0px 28px 0px 28px;
+    border-radius: 8px;
+  }
+
+  .title {
+    width: 139px !important;
+    text-align: center;
+    font-size: 24px !important;
+    line-height: 32px !important;
+    margin: 16px auto;
+  }
+
+  .subtitle {
+    font-size: 12px !important;
+    margin: 16px auto !important;
+    width: 100% !important;
+  }
+
+  .login {
+    & button {
+      margin: -13px 0px 0px 40px;
+      position: relative;
+      box-shadow: none;
+      top: 24px;
+      width: 168px;
+    }
+
+    & span {
+      color: #fff !important;
+      position: relative;
+      top: 24px;
+    }
+
+    & a {
+      color: #fff !important;
+    }
   }
 }
