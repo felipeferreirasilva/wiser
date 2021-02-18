@@ -2,43 +2,29 @@ const users = [
   {
     id: "1",
     createdAt: "2021-02-18T19:04:04.225Z",
-    name: "Roberta Kulas IV",
-    avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/martip07/128.jpg",
-    username: "Cali58@yahoo.com",
-    password: "WCj6TIQxWBXmEn3",
+    firstName: "Felipe",
+    lastName: "Silva",
+    avatar: "https://avatars.dicebear.com/4.5/api/avataaars/felip.svg",
+    username: "felipe@gmail.com",
+    password: "123456",
   },
   {
     id: "2",
     createdAt: "2021-02-18T16:30:24.656Z",
-    name: "Miss Hollie Zboncak",
-    avatar:
-      "https://s3.amazonaws.com/uifaces/faces/twitter/lanceguyatt/128.jpg",
-    username: "Frederik_Rippin@gmail.com",
-    password: "a32o96I6LHQiVmW",
+    firstName: "Flavia",
+    lastName: "Ferreira",
+    avatar: "https://avatars.dicebear.com/4.5/api/avataaars/Hollie.svg",
+    username: "flavia@gmail.com",
+    password: "123456",
   },
   {
     id: "3",
     createdAt: "2021-02-17T20:20:12.173Z",
-    name: "Alec Sporer",
-    avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/artvavs/128.jpg",
-    username: "Kattie.Cruickshank20@hotmail.com",
-    password: "O3VlfifKwVAVEc4",
-  },
-  {
-    id: "4",
-    createdAt: "2021-02-18T02:13:07.938Z",
-    name: "Bert Hyatt",
-    avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/hafeeskhan/128.jpg",
-    username: "Jules_Gibson@yahoo.com",
-    password: "2J38IbtnXEAAVH3",
-  },
-  {
-    id: "5",
-    createdAt: "2021-02-18T17:07:14.013Z",
-    name: "Dewitt MacGyver",
-    avatar: "https://s3.amazonaws.com/uifaces/faces/twitter/themrdave/128.jpg",
-    username: "Sidney.Runolfsdottir94@yahoo.com",
-    password: "3J8lxjknRh3v9va",
+    firstName: "Arthur",
+    lastName: "Gonçalves",
+    avatar: "https://avatars.dicebear.com/4.5/api/avataaars/alex23.svg",
+    username: "arthur@gmail.com",
+    password: "123456",
   },
 ];
 
@@ -53,7 +39,7 @@ export default (req, res) => {
     );
 
     if (user != undefined) {
-      res.status(200).json({ user });
+      res.status(200).json({ ...user });
     } else {
       res.status(400).json({ error: "Usuário ou senha inválidos" });
     }
