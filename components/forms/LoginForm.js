@@ -26,7 +26,7 @@ const LoginForm = () => {
       return false;
     }
 
-    dispatch(login({ userData: { username, password } }));
+    dispatch(login({ username, password }));
   };
 
   return (

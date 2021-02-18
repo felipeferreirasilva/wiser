@@ -23,10 +23,16 @@ export const login = (userData) => {
 };
 
 //REDUCER
-const reducer = (state = {}, action) => {
+
+const initialState = {
+  isLogged: false,
+  user: {},
+};
+
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case Types.LOGIN:
-      return state;
+      return { ...state, isLogged: true, user: { ...action.payload } };
     default:
       return state;
   }
