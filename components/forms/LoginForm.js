@@ -1,17 +1,23 @@
 import React, { useState } from "react";
-import styles from "./Login.module.scss";
+import styles from "./LoginForm.module.scss";
 import Input from "../Input";
 import Button from "../Button";
+import { login } from "../../redux/modules/auth";
+import { useSelector, useDispatch } from "react-redux";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const dispatch = useDispatch();
 
   const onSubmitForm = (e) => {
     e.preventDefault();
-    console.log("teste", username, password);
-    console.log(errors);
+    const userData = {
+      username,
+      password,
+    };
+    dispatch(login(userData));
   };
 
   return (
