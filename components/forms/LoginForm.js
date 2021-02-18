@@ -3,7 +3,8 @@ import styles from "./LoginForm.module.scss";
 import Input from "../Input";
 import Button from "../Button";
 import { login } from "../../redux/modules/auth";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import { isValidEmail, isValidPassword } from "../../shared/utils/validators";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");
@@ -13,11 +14,19 @@ const LoginForm = () => {
 
   const onSubmitForm = (e) => {
     e.preventDefault();
-    const userData = {
-      username,
-      password,
-    };
-    dispatch(login(userData));
+    setErrors({});
+
+    if (!isValidEmail(username)) {
+      setErrors({ email: "Digite um e-mail válido." });
+      return false;
+    }
+
+    if (!isValidPassword(password)) {
+      setErrors({ password: "Digite uma senha válida." });
+      return false;
+    }
+
+    dispatch(login({ userData: { username, password } }));
   };
 
   return (

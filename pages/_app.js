@@ -2,7 +2,7 @@ import React from "react";
 import { Provider } from "react-redux";
 import store from "../redux/store";
 
-import "../public/styles/global.scss";
+import "../shared/styles/global.scss";
 
 const App = ({ Component, pageProps }) => {
   return (

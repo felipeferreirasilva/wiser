@@ -1,18 +1,23 @@
 import styled from "styled-components";
+import { MdClose as Icon } from "react-icons/md";
 
 const _Input = ({ id, type, value, onChange, label, error, required }) => {
   return (
-    <>
+    <div>
       {label && <Label htmlFor={id}>{label}</Label>}
-      <Input
-        id={id}
-        type={type}
-        value={value}
-        onChange={(e) => onChange(e)}
-        required={required}
-      />
+      <div className="flex align-items-center mb-10">
+        <Input
+          id={id}
+          type={type}
+          value={value}
+          onChange={(e) => onChange(e)}
+          required={required}
+          style={error && { border: "1px solid #ff377f" }}
+        />
+        {error && <Icon style={{ marginLeft: "-30px", color: "#ff377f" }} />}
+      </div>
       {error && <Error>{error}</Error>}
-    </>
+    </div>
   );
 };
 
@@ -36,12 +41,10 @@ const Input = styled.input`
   padding: 17px;
   box-sizing: border-box;
   display: block;
-  margin: 8px 0px 16px 0px;
+  margin: 8px 0px 8px 0px;
+  padding-right: 40px;
   &:focus {
     outline: none;
-  }
-  &:focus:required:invalid {
-    border: 1px solid #ff377f;
   }
 `;
 
