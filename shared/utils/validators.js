@@ -8,5 +8,5 @@ export const isValidEmail = (email) => {
 };
 
 export const isValidPassword = (password) => {
-  return password.length > 6 ? true : false;
+  return password.length > 5 ? true : false;
 };
