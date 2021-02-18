@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const _Input = ({ id, type, value, onChange, label, required }) => {
+const _Input = ({ id, type, value, onChange, label, error, required }) => {
   return (
     <>
       {label && <Label htmlFor={id}>{label}</Label>}
@@ -11,6 +11,7 @@ const _Input = ({ id, type, value, onChange, label, required }) => {
         onChange={(e) => onChange(e)}
         required={required}
       />
+      {error && <Error>{error}</Error>}
     </>
   );
 };
@@ -42,6 +43,14 @@ const Input = styled.input`
   &:focus:required:invalid {
     border: 1px solid #ff377f;
   }
+`;
+
+const Error = styled.span`
+  color: #ff377f;
+  position: relative;
+  top: -12px;
+  left: 10px;
+  font-size: 10px;
 `;
 
 export default _Input;

@@ -6,21 +6,24 @@ import Button from "../Button";
 const LoginForm = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [errors, setErrors] = useState({});
 
   const onSubmitForm = (e) => {
     e.preventDefault();
     console.log("teste", username, password);
+    console.log(errors);
   };
 
   return (
     <>
-      <form onSubmit={(e) => onSubmitForm(e)}>
+      <form onSubmit={(e) => onSubmitForm(e)} noValidate>
         <Input
           id="email"
           type="email"
           label="E-mail"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
+          error={errors.email}
           required
         />
         <Input
@@ -29,15 +32,16 @@ const LoginForm = () => {
           label="Senha"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          error={errors.password}
           required
         />
-        <Button primary type="submit" value="Submit" label="Enviar" />
+        <Button primary type="submit" value="Submit" label="Entrar" />
       </form>
-      <div className={styles.loginFooter}>
+      <footer className={styles.loginFooter}>
         <span>
           Esqueceu seu login ou senha? Clique <a href="#">aqui</a>
         </span>
-      </div>
+      </footer>
     </>
   );
 };

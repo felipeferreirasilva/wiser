@@ -1,13 +1,15 @@
 .loginFooter {
-  position: absolute;
-  width: 256px;
-  height: 40px;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 20px;
-  text-align: center;
-  color: #989fdb;
-  margin-top: 32px;
+  & span {
+    position: absolute;
+    width: 256px;
+    height: 40px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    color: #989fdb;
+    margin-top: 32px;
+  }
 
   & a {
     color: #9626ac;

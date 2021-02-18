@@ -56,8 +56,8 @@
   .form {
     z-index: 2;
     margin: 0 auto !important;
-    background: white;
-    padding: 0px 28px 0px 28px;
+    background: #faf5ff;
+    padding: 8px 28px 0px 28px;
     border-radius: 8px;
   }
 
@@ -84,14 +84,17 @@
       width: 168px;
     }
 
-    & span {
-      color: #fff !important;
+    & footer {
       position: relative;
       top: 24px;
-    }
 
-    & a {
-      color: #fff !important;
+      & span {
+        color: #fff !important;
+      }
+
+      & a {
+        color: #fff !important;
+      }
     }
   }
 }
