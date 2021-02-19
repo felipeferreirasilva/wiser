@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wiser
 
-## Getting Started
+## Video Demo
+[![Alt text](https://img.youtube.com/vi/VYein0jsOuU/0.jpg)](https://www.youtube.com/watch?v=NHgNaoQPHCg)
 
-First, run the development server:
+## Demo Online
+https://wiser.vercel.app/
+### Usuarios de teste
+user: felipe@gmail.com <br>
+pass: 123456
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+user: flavia@gmail.com <br>
+pass: 123456
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+user: arthur@gmail.com <br>
+pass: 123456
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+## About the project
+This is a simple project created with React to show some skills as Front-end developer.
+ 
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Technologies
+### Front-End
+React, NextJs, Hooks, Styled Components, Redux and Axios
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Installing Client
+### Install Dependencies
+run 'npm install' inside wiser folder
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Running Application
+### Run Client
+use 'npm run dev' to run the client
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Author
+Felipe Silva 
+email: felipeferreirasilva@gmail.com
+
+
+
+## License
+You're free to copy, edit, and use this project, just remember to give the credits
