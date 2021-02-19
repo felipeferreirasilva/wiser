@@ -1,6 +1,6 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import thunk from "redux-thunk";
-import auth from "./modules/auth";
+import auth from "./ducks/auth";
 
 const reducers = combineReducers({
   auth,

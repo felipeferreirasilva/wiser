@@ -4,7 +4,7 @@ import Button from "../../../components/Button";
 import Toast from "../../../components/Toast";
 import LoginForm from "../../../components/forms/LoginForm";
 import { useSelector, useDispatch } from "react-redux";
-import { logout } from "../../../redux/modules/auth";
+import { logout } from "../../../redux/ducks/auth";
 
 const Login = () => {
   const isLogged = useSelector((state) => state.auth["isLogged"]);
