@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from "styled-components";
 import { MdClose as Icon } from "react-icons/md";
 
@@ -20,6 +21,16 @@ const _Input = ({ id, type, value, onChange, label, error, required }) => {
     </div>
   );
 };
+
+_Input.propTypes = {
+  id: PropTypes.string,
+  type: PropTypes.string,
+  value: PropTypes.string,
+  onChange: PropTypes.func,
+  required: PropTypes.bool,
+  label: PropTypes.string,
+  error: PropTypes.string,
+}
 
 const Label = styled.label`
   font-weight: 400;

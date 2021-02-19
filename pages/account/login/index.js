@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./Login.module.scss";
 import Button from "../../../components/Button";
 import Toast from "../../../components/Toast";
-import LoginForm from "../../../components/forms/LoginForm";
+import LoginForm from "../../../components/forms/Login";
 import { useSelector, useDispatch } from "react-redux";
 import { logout } from "../../../redux/ducks/auth";
 

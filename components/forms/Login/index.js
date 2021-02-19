@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./LoginForm.module.scss";
-import Input from "../Input";
-import Button from "../Button";
-import { login } from "../../redux/ducks/auth";
+import Input from "../../Input";
+import Button from "../../Button";
+import { login } from "../../../redux/ducks/auth";
 import { useDispatch } from "react-redux";
-import { isValidEmail, isValidPassword } from "../../shared/utils/validators";
+import { isValidEmail, isValidPassword } from "../../../shared/utils/validators";
 
 const LoginForm = () => {
   const [username, setUsername] = useState("");

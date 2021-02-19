@@ -1,8 +1,13 @@
+import PropTypes from 'prop-types';
 import styled from "styled-components";
 
 const _Toast = ({ message }) => {
   return <Toast>{message}</Toast>;
 };
+
+_Toast.propTypes = {
+  message: PropTypes.string,
+}
 
 const Toast = styled.div`
   display: flex;
