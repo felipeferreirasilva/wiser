@@ -16,7 +16,7 @@ const Toast = styled.div`
   border-bottom-left-radius: 8px;
   background: #130525bf;
   z-index: 3;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 1s;
   color: #fff;
   font-weight: normal;
   font-size: 14px;
