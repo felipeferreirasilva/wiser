@@ -12,11 +12,6 @@ const Login = () => {
   const error = useSelector((state) => state.auth["error"]);
   const dispatch = useDispatch();
 
-  console.log(
-    "STORE",
-    useSelector((state) => state.auth)
-  );
-
   return (
     <div className={styles.login}>
       {error && <Toast message={error} />}
