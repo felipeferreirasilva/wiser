@@ -36,6 +36,9 @@ run 'npm install' inside wiser folder
 use 'npm run dev' to run the client
 
 
+## Running Tests
+### Run Tests
+use 'npm run test' to run tests
 
 ## Author
 Felipe Silva 
