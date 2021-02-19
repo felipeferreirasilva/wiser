@@ -1,7 +1,7 @@
 # Wiser
 
 ## Video Demo
-[![Alt text](https://img.youtube.com/vi/VYein0jsOuU/0.jpg)](https://www.youtube.com/watch?v=NHgNaoQPHCg)
+[![Alt text](https://img.youtube.com/vi/VYein0jsOuU/0.jpg)](https://youtu.be/VYein0jsOuU)
 
 ## Demo Online
 https://wiser.vercel.app/
