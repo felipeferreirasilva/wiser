@@ -14,11 +14,22 @@ export const login = (userData) => {
       .then(({ data }) => {
         dispatch({
           type: Types.LOGIN,
-          payload: data,
+          payload: {
+            isLogged: true,
+            user: data,
+            error: null,
+          },
         });
       })
-      .catch((error) => {
-        console.log(error);
+      .catch(({ response }) => {
+        dispatch({
+          type: Types.LOGIN,
+          payload: {
+            isLogged: false,
+            user: {},
+            error: response.data.error,
+          },
+        });
       });
   };
 };
@@ -33,15 +44,18 @@ export const logout = () => {
 const initialState = {
   isLogged: false,
   user: {},
-  errors: {},
+  error: null,
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case Types.LOGIN:
-      return { ...state, isLogged: true, user: { ...action.payload } };
+      return {
+        ...state,
+        ...action.payload,
+      };
     case Types.LOGOUT:
-      return {};
+      return { ...initialState };
     default:
       return state;
   }
